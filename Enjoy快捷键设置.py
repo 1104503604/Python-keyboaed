@@ -25,6 +25,9 @@ def enter_key_2 ():
     x, y = 3231, 276
     pyautogui.moveTo(x, y)
 
+    # 模拟鼠标滚轮向上滚动
+    pyautogui.scroll(10000)
+
     # 在当前位置点击鼠标左键
     pyautogui.click()
     
