@@ -12,6 +12,9 @@ def enter_key():
     keyboard.press('space')
     keyboard.release('space')
 
+    # 将鼠标往下移动，不要遮住单词
+    pyautogui.moveTo(x, y + 130)
+
 keyboard.add_hotkey('right', enter_key)
 
 def enter_key_1():
@@ -46,6 +49,9 @@ def enter_key_3 ():
 
     keyboard.press('space')
     keyboard.release('space')
+
+    # 将鼠标往下移动，不要遮住单词
+    pyautogui.moveTo(x, y + 130)
 
 keyboard.add_hotkey('left', enter_key_3 )
 
