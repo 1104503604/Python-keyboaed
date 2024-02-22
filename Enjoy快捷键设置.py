@@ -1,5 +1,5 @@
-import keyboard
 import pyautogui
+import keyboard
 
 def enter_key():
     # 将鼠标移动到指定位置 (x, y)
@@ -43,20 +43,13 @@ def enter_key_3 ():
 
     # 在当前位置点击鼠标左键
     pyautogui.click()
-    
+
     keyboard.press('space')
     keyboard.release('space')
 
-def enter_key_4 ():
-    # 将鼠标移动到指定位置 (x, y)
-    x, y = 1622, 1955
-    pyautogui.moveTo(x, y)
-
-    # 在当前位置点击鼠标左键
-    pyautogui.click()
-
-keyboard.add_hotkey('0', enter_key_4 )
+keyboard.add_hotkey('left', enter_key_3 )
 
 
+# 开始主循环，等待用户输入
 keyboard.wait()
 
