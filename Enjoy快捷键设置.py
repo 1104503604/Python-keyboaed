@@ -25,7 +25,7 @@ keyboard.add_hotkey('down', enter_key_1)
 
 def enter_key_2 ():
     # 将鼠标移动到指定位置 (x, y)
-    x, y = 3231, 276
+    x, y = 3231, 229
     pyautogui.moveTo(x, y)
 
     # 模拟鼠标滚轮向上滚动
