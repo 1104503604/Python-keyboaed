@@ -55,7 +55,32 @@ def enter_key_3 ():
 
 keyboard.add_hotkey('left', enter_key_3 )
 
+def enter_key_4 ():
+    # 将鼠标移动到指定位置 (x, y)
+    x, y = 1495, 501
+    pyautogui.moveTo(x, y)
 
-# 开始主循环，等待用户输入
+    # 在当前位置点击鼠标左键
+    pyautogui.click()
+
+    # 将鼠标往下移动，不要遮住单词
+    pyautogui.moveTo(x, y + 130)
+
+keyboard.add_hotkey('1', enter_key_4 )
+
+def enter_key_5 ():
+    # 将鼠标移动到指定位置 (x, y)
+    x, y = 1759, 501
+    pyautogui.moveTo(x, y)
+
+    # 在当前位置点击鼠标左键
+    pyautogui.click()
+
+    # 将鼠标往下移动，不要遮住单词
+    pyautogui.moveTo(x, y + 130)
+
+keyboard.add_hotkey('3', enter_key_5 )
+
+# 开始主循环，等待用户输入 
 keyboard.wait()
 
