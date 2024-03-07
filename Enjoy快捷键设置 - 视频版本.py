@@ -21,6 +21,19 @@ def enter_key_1():
     global press_count
     if press_count > 24 :
         enter_key()
+    elif press_count == 0 :
+        # 将鼠标移动到指定位置 (x, y)
+        x, y = 1327, 504
+        pyautogui.moveTo(x, y)
+
+        # 在当前位置点击鼠标左键
+        pyautogui.click()
+
+        pyautogui.moveTo(1, 1)
+                
+        press_count += 1
+        print("-------------")
+        print(f"朗读了 {press_count} 次")
     else:
         # 将鼠标移动到指定位置 (x, y)
         x, y = 1327, 504
@@ -43,8 +56,6 @@ def enter_key_2():
 
         # 在当前位置点击鼠标左键
         pyautogui.doubleClick()
-
-        pyautogui.moveTo(1, 1)
         
 
 keyboard.add_hotkey('ctrl+f', enter_key_2)
@@ -60,7 +71,8 @@ def enter_key_3 ():
 
     pyautogui.moveTo(1, 1)
 
-    press_count = 0
+    if press_count > 24 :
+        press_count = 0
 
 keyboard.add_hotkey('left', enter_key_3 )
 
@@ -87,6 +99,12 @@ def enter_key_5 ():
     press_count = 0
 
 keyboard.add_hotkey('3', enter_key_5 )
+
+def enter_key_6 ():
+    global press_count
+    press_count = 0
+
+keyboard.add_hotkey('up', enter_key_6 )
 
 # 开始主循环，等待用户输入 
 keyboard.wait()
